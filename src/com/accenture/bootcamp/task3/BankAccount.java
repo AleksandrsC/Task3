@@ -1,6 +1,4 @@
 package com.accenture.bootcamp.task3;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.math.BigDecimal;
 /**
@@ -9,6 +7,8 @@ import java.math.BigDecimal;
  */
 public class BankAccount {
     private BigDecimal balance;
+    private PrintStream out=System.out;//for future extensibility
+
     public BankAccount(){
         balance=BigDecimal.ZERO;
     }
@@ -22,7 +22,7 @@ public class BankAccount {
      * @param amount
      */
     public void deposit(Number amount){
-        balance=balance.add(new BigDecimal(amt.toString()));
+        balance=balance.add(new BigDecimal(amount.toString()));
     }
     /**
      *     create a method "withdraw" with one parameter "amount"
@@ -30,18 +30,19 @@ public class BankAccount {
 
      */
     public void withdraw(Number amount){
-        balance=balance.subtract(new BigDecimal(amt.toString()));
+        BigDecimal amt=new BigDecimal(amount.toString());
+        if(balance.compareTo(amt)<0){
+            out.println("There is not enough funds.");
+        }else
+            balance=balance.subtract(amt);
     }
 
-    public void printBalance(PrintStream out){
-        out.println("balance:"+balance);
-    }
 
     /**
      * create a method "printBalance" which displays the current balance to user
      */
     public void printBalance(){
-        printBalance(System.out);
+        out.println("balance:"+balance);
     }
 
     /**
@@ -55,4 +56,7 @@ public class BankAccount {
     }
 
 
+    public void setOutput(PrintStream out) {
+        this.out = out;
+    }
 }
