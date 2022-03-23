@@ -35,7 +35,7 @@ public abstract class Car extends Vehicle {
     public String toString() {
         return "Car{" +
                 "getMaxGear()=" + getMaxGear() +
-                "currentGear=" + currentGear +
+                ", currentGear=" + currentGear +
                 ", model='" + model + '\'' +
                 ", engine='" + engine + '\'' +
                 ", fuel=" + fuelAsString(fuel) +
@@ -85,8 +85,13 @@ public abstract class Car extends Vehicle {
     public void neutral(){
         currentGear=NEUTRAL_GEAR;
     }
+
+    /**
+     * also inverts the speed
+     */
     public void reverse(){
         currentGear=REVERSE_GEAR;
+        setSpeed(0-getSpeed());
     }
     public String getModel() {
         return model;

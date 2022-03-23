@@ -47,9 +47,19 @@ public class Main {
         System.out.println("account B");
         b.printBalance();
         // Car demo/test **************************************
-
-
-
+        Car theCar=new VWGolfMk810TSI();
+        System.out.println("Car demo");
+        System.out.println("Here's our car:"+theCar);
+        theCar.shiftUp();
+        System.out.println("After up-shift:"+theCar);
+        System.out.println("Current heading:"+theCar.getDirection()+ ", speed:"+theCar.getSpeed());
+        theCar.setSpeed(10);
+        theCar.steer(10);
+        System.out.println("After speed set to 10 m/s and 10 degree right turn");
+        System.out.println("Current heading:"+theCar.getDirection()+ ", speed:"+theCar.getSpeed());
+        theCar.reverse();
+        System.out.println("After reverse");
+        System.out.println("Current heading:"+theCar.getDirection()+ ", speed:"+theCar.getSpeed());
 
 
 
