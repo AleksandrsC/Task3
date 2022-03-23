@@ -11,9 +11,9 @@ public abstract class Car extends Vehicle {
     public static final int NEUTRAL_GEAR=0;
     public static final int REVERSE_GEAR=-1;
     private int currentGear=NEUTRAL_GEAR;
-    private String model="Generic car";
-    private String engine="Generic engine";
-    private Car.Fuel fuel=PETROL;
+    protected String model="Generic car";
+    protected String engine="Generic engine";
+    protected Car.Fuel fuel=PETROL;
 
 
 
