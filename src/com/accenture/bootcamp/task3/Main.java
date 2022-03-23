@@ -1,9 +1,29 @@
 package com.accenture.bootcamp.task3;
 
+import java.util.Arrays;
+
 public class Main {
 
+    public static int[] simpleArrayCopy (int[] source){
+        int[] rv=new int[source.length];
+        int idx=0;
+        for(int i:source){
+            rv[idx++]=i;
+        }
+        return rv;
+
+    }
+
     public static void main(String[] args) {
-	// Bank demo/test*****************************************
+        // mult tables
+
+        //Array demo --------------
+        int[] test={1,5,7,4};
+        int[] copy=simpleArrayCopy(test);
+        System.out.println("Arrays demo 2");
+        System.out.println("Orig array"+ Arrays.toString(test));
+        System.out.println("Copied array"+ Arrays.toString(copy));
+	    // Bank demo/test*****************************************
         System.out.println("BankAccount demo");
         BankAccount a=new BankAccount(2000);
         BankAccount b=new BankAccount(2000);
