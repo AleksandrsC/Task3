@@ -13,9 +13,28 @@ public class Main {
         return rv;
 
     }
-
+    public static int[][] multTable(){
+        int[][] rv=new int[10][10];
+        for(int i=0;i<10;i++){
+            for(int j=0;j<10;j++){
+                rv[i][j]=(i+1)*(j+1);
+            }//for j
+        }//for i
+        return rv;
+    }
+    public static void printAsMultTable(int[][] table){
+        for(int i=0;i<table.length;i++){
+            for(int j=0;j<table[i].length;j++){
+                System.out.print(" "+(i+1)+"*"+(j+1)+"="+table[i][j]);
+            }//for j
+            System.out.println();
+        }//for i
+    }
     public static void main(String[] args) {
         // mult tables
+        int[][] table=multTable();
+        System.out.println("multiplication table demo");
+        printAsMultTable(table);
 
         //Array demo --------------
         int[] test={1,5,7,4};
