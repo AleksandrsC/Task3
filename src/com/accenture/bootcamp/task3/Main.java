@@ -3,7 +3,7 @@ package com.accenture.bootcamp.task3;
 public class Main {
 
     public static void main(String[] args) {
-	// Bank demo/test````````````````````````````````````````````````````````
+	// Bank demo/test*****************************************
         System.out.println("BankAccount demo");
         BankAccount a=new BankAccount(2000);
         BankAccount b=new BankAccount(2000);
@@ -46,6 +46,8 @@ public class Main {
         a.printBalance();
         System.out.println("account B");
         b.printBalance();
+        // Car demo/test **************************************
+
 
 
 

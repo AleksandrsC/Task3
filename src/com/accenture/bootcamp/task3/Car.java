@@ -8,6 +8,19 @@ public abstract class Car extends Vehicle {
     public enum Fuel{
         PETROL,DIESEL,NATURAL_GAS,ELECTRIC,EXOTIC
     }
+    public static String fuelAsString(Fuel fuel){
+
+        switch(fuel){
+            case PETROL: return "Petrol";
+            case DIESEL: return "Diesel";
+            case NATURAL_GAS: return "Natural Gas";
+            case ELECTRIC: return "Electric";
+            case EXOTIC: return "Exotic fuel (hydrogen, nitromethane, etc.)";
+        }
+        return "Unknown fuel";
+
+    }
+
     public static final int NEUTRAL_GEAR=0;
     public static final int REVERSE_GEAR=-1;
     private int currentGear=NEUTRAL_GEAR;
@@ -16,6 +29,17 @@ public abstract class Car extends Vehicle {
     protected Car.Fuel fuel=PETROL;
 
     public Car() {
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "getMaxGear()=" + getMaxGear() +
+                "currentGear=" + currentGear +
+                ", model='" + model + '\'' +
+                ", engine='" + engine + '\'' +
+                ", fuel=" + fuelAsString(fuel) +
+                '}';
     }
 
     /**
