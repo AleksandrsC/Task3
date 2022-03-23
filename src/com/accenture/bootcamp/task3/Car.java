@@ -15,7 +15,30 @@ public abstract class Car extends Vehicle {
     protected String engine="Generic engine";
     protected Car.Fuel fuel=PETROL;
 
+    public Car() {
+    }
 
+    /**
+     * @param speed     Speed in m/s
+     * @param direction absolute direction in degrees 0=North, 90=East, etc.
+     */
+    public Car(double speed, int direction) {
+        super(speed, direction);
+    }
+    /**
+     * @param speed     Speed in m/s
+     * @param direction absolute direction in degrees 0=North, 90=East, etc.
+     * @param initGear  initial gear. Set to max gear if too big, to reverse if less than -1;
+     */
+    public Car(double speed, int direction,int initGear) {
+        super(speed, direction);
+        if(initGear>getMaxGear()){
+            initGear=getMaxGear();
+        }else if(initGear<REVERSE_GEAR){
+            initGear=REVERSE_GEAR;
+        }
+        currentGear=initGear;
+    }
 
     /**
      * todo cars with multiple reverse gears
