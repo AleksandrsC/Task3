@@ -75,3 +75,18 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+/target/classes/com/accenture/bootcamp/task3/BankAccount.class
+/target/classes/com/accenture/bootcamp/task3/Car$1.class
+/target/classes/com/accenture/bootcamp/task3/Car$Fuel.class
+/target/classes/com/accenture/bootcamp/task3/Car.class
+/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/target/classes/com/accenture/bootcamp/task3/Main.class
+/target/surefire-reports/TEST-TestsTest.xml
+/target/test-classes/TestsTest.class
+/target/surefire-reports/TestsTest.txt
+/target/classes/com/accenture/bootcamp/task3/Vehicle.class
+/target/classes/com/accenture/bootcamp/task3/VWGolfMk810TSI.class
+/target/test-classes/com/accenture/bootcamp/task3/VWGolfMk810TSITest.class
