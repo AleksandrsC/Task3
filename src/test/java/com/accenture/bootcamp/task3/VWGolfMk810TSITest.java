@@ -47,4 +47,13 @@ class VWGolfMk810TSITest {
         assertEquals(testCar.getCurrentGear(),Car.NEUTRAL_GEAR);
     }
 
+    @Test
+    void steeringTest(){
+        int original=testCar.getDirection();
+        testCar.steer(360);
+        assertEquals(original,testCar.getDirection(),"360 degree turn didn't return us to the same heading");
+        testCar.steer(10);
+        assertEquals(original+10,testCar.getDirection(),"basic steering didn't work");
+    }
+
 }
